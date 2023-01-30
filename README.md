@@ -1,3 +1,4 @@
+
 # Startup-Enhancer
 
 ### Membre du groupe :
@@ -34,6 +35,12 @@ Si c'est la première fois que le conteneur PostgreSQL est lancé, il faut atten
 
 En utilisant Docker, nous avons rendu l'application facile à installer et à gérer, tout en assurant une compatibilité entre les composants pour une expérience utilisateur stable et fiable.
 
-Lors du lancement des applications avec docker-compose, les différents composants sont assignés à des ports spécifiques pour leur accès. Le container PostgreSQL est accessible sur le port `5432`, le serveur Flask sur le port `3333` et le tableau de bord sur le port `5173`. Tous ces ports sont accessibles sur localhost, ce qui signifie qu'ils peuvent être atteints en utilisant l'adresse IP locale de la machine sur laquelle l'application est en cours d'exécution.
+Lors du lancement des applications avec docker-compose, les différents composants sont assignés à des ports spécifiques pour leur accès. Le container PostgreSQL est accessible sur le port `5432`, le serveur Flask sur le port `3333` et le tableau de bord sur le port `5173`. Tous ces ports sont accessibles sur `localhost`, ce qui signifie qu'ils peuvent être atteints en utilisant l'adresse IP locale de la machine sur laquelle l'application est en cours d'exécution.
 
 ## 4. Les résultats que vous avez obtenu.
+- Affichage d'un diagramme circulaire et d'un tableau à barres pour montrer l'état des startups dans la catégorie `Média` aux `USA`
+<img width="1792" alt="image" src="https://user-images.githubusercontent.com/49391108/215619619-6e96563d-d6e0-49a0-892d-f1d30335302b.png">
+
+- Affichage d'un tableau à barres pour montrer les catégories de start-up qui ont recueilli le plus de fonds aux `USA`.
+<img width="1792" alt="image" src="https://user-images.githubusercontent.com/49391108/215619653-aacaeb94-0c0b-434d-bf70-26fe2d8de2a2.png">
+
