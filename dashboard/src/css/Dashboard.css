@@ -1,0 +1,23 @@
+.graphs {
+  display: flex;
+  width: 100vw;
+
+  margin-top: 80px;
+}
+
+.graphs canvas:first-of-type {
+  width: 400px !important;
+  height: 400px !important;
+
+  margin-right: 60px;
+}
+
+.graphs canvas:last-of-type {
+  width: 800px !important;
+  height: 400px !important;
+}
+
+.median canvas {
+  width: 1300px !important;
+  height: 650px !important;
+}
