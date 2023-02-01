@@ -21,6 +21,11 @@ function Main() {
     categories: [],
   });
 
+  const [selected, setSelected] = useState({
+    country: "",
+    category: "",
+  });
+
   useEffect(() => {
     async function init() {
       const countries = await getCountries();
@@ -43,15 +48,37 @@ function Main() {
         <h1>Startup launcher 🚀</h1>
         {state.countries && state.categories && (
           <div className="dashboard--selects">
-            <MultipleSelect placeholder={"Category"} items={state.categories} />
-            <MultipleSelect placeholder={"Country"} items={state.countries} />
+            <MultipleSelect
+              placeholder={"Category"}
+              items={state.categories}
+              selected={selected.category}
+              setSelected={(value) =>
+                setSelected({
+                  ...selected,
+                  category: value,
+                })
+              }
+            />
+            <MultipleSelect
+              placeholder={"Country"}
+              items={state.countries}
+              selected={selected.country}
+              setSelected={(value) =>
+                setSelected({
+                  ...selected,
+                  country: value,
+                })
+              }
+            />
           </div>
         )}
 
         <Button
           variant="contained"
           size="large"
-          onClick={() => navigate("/dashboard")}
+          onClick={() =>
+            navigate(`/dashboard/${selected.category}/${selected.country}`)
+          }
         >
           Validate
         </Button>
