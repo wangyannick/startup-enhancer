@@ -128,8 +128,8 @@ Toutes les combinaisons `category` et `country` ne retournent pas de données ca
   {
     "data": [
       {
-        "category": "string",
-        "median": "number"
+        "category": "String",
+        "median": "Number"
       }
     ]
   }
@@ -160,7 +160,7 @@ Toutes les combinaisons `category` et `country` ne retournent pas de données ca
           "permalink": "String",
           "region": "String",
           "state_code": "String",
-          "status": "String"
+          "status": "acquired | closed | ipo | operating"
         }
       ],
       "status": [
