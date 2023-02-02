@@ -107,11 +107,195 @@ Toutes les combinaisons `category` et `country` ne retournent pas de données ca
   ```
 
 - `GET /api/countries` : Retourne la liste des pays dans la base de données.
+
+  ```json
+  {
+    "data": ["USA", "CAN", "GBR", "AUS", "IND", "FRA", "DEU", "ESP", "..."]
+  }
+  ```
+
 - `GET /api/states/<country>` : Retourne la liste des états dans le pays spécifié.
+
+  ```json
+  {
+    "data": ["CA", "NY", "TX", "WA", "IL", "MA", "CO", "PA", "..."]
+  }
+  ```
+
 - `GET /api/median/<country>` : Retourne la moyenne des montants de levée de fonds pour les catégories dans le pays spécifié.
-- `GET /api/startups` : Retourne toutes les startups dans la base de données.
+
+  ```json
+  {
+    "data": [
+      {
+        "category": "string",
+        "median": "number"
+      }
+    ]
+  }
+  ```
+
+- `GET /api/startups/category` : Retourne les startups dans la catégorie spécifiée.
+
+  ```json
+  {
+    "data": {
+      "info": {
+        "still_operating": "Number",
+        "total": "Number"
+      },
+      "startups": [
+        {
+          "category_list": "String",
+          "city": "String",
+          "country_code": "String",
+          "first_funding_at": "Date",
+          "founded_at": "Date",
+          "funding_rounds": "String",
+          "funding_total_usd": "String",
+          "homepage_url": "String",
+          "id": "Number",
+          "last_funding_at": "Date",
+          "name": "String",
+          "permalink": "String",
+          "region": "String",
+          "state_code": "String",
+          "status": "String"
+        }
+      ],
+      "status": [
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "acquired"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "closed"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "ipo"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "operating"
+        }
+      ]
+    }
+  }
+  ```
+
 - `GET /api/startups/<category>/<country>` : Retourne les startups dans la catégorie et le pays spécifiés.
+
+  ```json
+  {
+    "data": {
+      "info": {
+        "still_operating": "Number",
+        "total": "Number"
+      },
+      "startups": [
+        {
+          "category_list": "String",
+          "city": "String",
+          "country_code": "String",
+          "first_funding_at": "Date",
+          "founded_at": "Date",
+          "funding_rounds": "String",
+          "funding_total_usd": "String",
+          "homepage_url": "String",
+          "id": "Number",
+          "last_funding_at": "Date",
+          "name": "String",
+          "permalink": "String",
+          "region": "String",
+          "state_code": "String",
+          "status": "String"
+        }
+      ],
+      "status": [
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "acquired"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "closed"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "ipo"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "operating"
+        }
+      ]
+    }
+  }
+  ```
+
 - `GET /api/startups/<category>/<country>/<state>` : Retourne les startups dans la catégorie et le pays spécifiés et dans l'état spécifié.
+
+  ```json
+  {
+    "data": {
+      "info": {
+        "still_operating": "Number",
+        "total": "Number"
+      },
+      "startups": [
+        {
+          "category_list": "String",
+          "city": "String",
+          "country_code": "String",
+          "first_funding_at": "Date",
+          "founded_at": "Date",
+          "funding_rounds": "String",
+          "funding_total_usd": "String",
+          "homepage_url": "String",
+          "id": "Number",
+          "last_funding_at": "Date",
+          "name": "String",
+          "permalink": "String",
+          "region": "String",
+          "state_code": "String",
+          "status": "String"
+        }
+      ],
+      "status": [
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "acquired"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "closed"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "ipo"
+        },
+        {
+          "funding_total_usd": "Number",
+          "percentage": "Number",
+          "status": "operating"
+        }
+      ]
+    }
+  }
+  ```
 
 ## 7. Les résultats que vous avez obtenu.
 
