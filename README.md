@@ -2,7 +2,7 @@
 
 ### Membre du groupe :
 
-ABENAQUI Adrien, AKYOL Olivier, WANG Yannick, ES-KOUSRI Ali, GAMBERT Lucas
+ABENAQUI Adrien, AKYOL Olivier, WANG Yannick, ES-SKOURI Ali, GAMBERT Lucas
 
 ## 1. La problématique que vous souhaitez traiter.
 
